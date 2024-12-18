@@ -1,0 +1,7 @@
+{
+  "name": "appEnvios",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
