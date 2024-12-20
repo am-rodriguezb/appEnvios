@@ -1,0 +1,133 @@
+/* Variables globales */
+:root {
+    --primary-color: #FF6B4A;
+    --background-color: #1a237e; /* Cambiado a azul oscuro */
+    --text-color: #FFFFFF;
+    --input-background: rgba(255, 255, 255, 0.1);
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Estilos del header */
+.ion-no-border {
+    ion-toolbar.barra {
+        --background: var(--background-color);
+        --color: var(--text-color);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+
+    .logo-image {
+        height: 60px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--text-color);
+    }
+}
+
+/* Contenedor principal */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 2rem;
+    background: linear-gradient(
+        rgba(255, 107, 74, 0.6),
+        rgba(255, 107, 74, 0.6)
+    ),
+    url("/assets/universida_fondo.jpg") center / cover no-repeat;
+}
+
+/* Formulario con efecto glassmorphism */
+.login-form {
+    max-width: 400px;
+    margin: auto;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos de entrada */
+.form-fields {
+    margin-bottom: 2rem;
+
+    .input-item {
+        --background: rgba(255, 255, 255, 0.1);
+        --border-radius: 8px;
+        --padding-start: 1rem;
+        --padding-end: 1rem;
+        margin-bottom: 1rem;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        ion-label {
+            --color: var(--text-color);
+            font-weight: 400;
+        }
+
+        ion-input {
+            --color: var(--text-color);
+            --placeholder-color: rgba(255, 255, 255, 0.6);
+            font-family: var(--font-family);
+        }
+    }
+}
+
+/* Sección de botones */
+.button-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .login-button {
+        --background: var(--primary-color);
+        --background-hover: #FF8266;
+        --border-radius: 8px;
+        height: 48px;
+        font-weight: 500;
+    }
+
+    .reset-button {
+        --color: var(--text-color);
+        font-size: 0.875rem;
+        text-decoration: underline;
+        opacity: 0.9;
+    }
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+    .logo-container {
+        .logo-image {
+            height: 40px;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+        }
+    }
+
+    .login-container {
+        padding: 1rem;
+    }
+    
+    .login-form {
+        padding: 1.5rem;
+    }
+}

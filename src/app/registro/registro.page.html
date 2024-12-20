@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="registroForm" (ngSubmit)="registro()">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Pagina de resgistro</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-item>
+      <ion-label position="floating">Ingrese un nombre de usuario</ion-label>
+      <ion-input formControlName="usuario" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ingrese su rut</ion-label>
+      <ion-input formControlName="rut" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ingrese un correo electronico</ion-label>
+      <ion-input formControlName="correo" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ingrese un numero telefonico</ion-label>
+      <ion-input formControlName="telefono" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Crea tu contraseña</ion-label>
+      <ion-input formControlName="contraseña" type="password"></ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit" [disabled]="!registroForm.valid" routerLink="/home.page">Crear usuario</ion-button>
+  </form>
+</ion-content>

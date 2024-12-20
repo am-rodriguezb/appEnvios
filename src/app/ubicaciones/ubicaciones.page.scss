@@ -1,0 +1,27 @@
+ion-button {
+    margin-top: 10px; /* Espacio entre la descripción y el botón */
+  }
+  
+  .content-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+  }
+  
+  .right-image {
+    width: 100%; /* Controla el tamaño de la imagen */
+    max-width: 600px; /* Máximo tamaño de la imagen */
+    height: 500px; /* Mantiene la proporción de la imagen */
+    margin-left: 20px; /* Espacio entre la imagen y la información */
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    font-size: 14px;
+  }
